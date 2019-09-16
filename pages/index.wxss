@@ -1,0 +1,105 @@
+/* pages/index.wxss */
+
+.page {
+  /* background: url('https://ditu-1257112807.cos.ap-chengdu.myqcloud.com/ditu/lm.webp');
+  background-size: 100% 100%; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* 首页背景图 */
+
+.index_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.indexbg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 顶部滚动消息 */
+
+.tui-rolling-news {
+  width: 100%;
+  padding: 12rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  color: #f54f46;
+}
+
+.img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.tui-swiper {
+  margin-left: 10rpx;
+  border-radius: 5px;
+  font-size: 28rpx;
+  height: 50rpx;
+  flex: 1;
+  background-color: #fff8d5;
+}
+
+.tui-swiper-item {
+  display: flex;
+  align-items: center;
+}
+
+.tui-news-item {
+  line-height: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 20rpx;
+}
+
+/* 修改首页坐标样式 */
+
+.button_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.button {
+  width: 145rpx;
+  height: 145rpx;
+  margin: 20px;
+  background-color: rgb(0, 33, 71);
+  /* background-color: #002147; */
+  border-radius: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.button text {
+  /* width:60%; */
+  align-self: center;
+  text-align: center;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 45vh;
+  font-size: 27rpx;
+  text-align: center;
+  line-height: 150%;
+  text-shadow: #000 1rpx 0 0, #000 0 1rpx 0, #000 -1rpx 0 0, #000 0 -1rpx 0;
+}

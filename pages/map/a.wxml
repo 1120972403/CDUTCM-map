@@ -1,0 +1,4 @@
+<view class="text_box" wx:for="{{steps}}" wx:for-item="i" wx:key="*this" >
+  {{i.instruction}}
+</view>
+

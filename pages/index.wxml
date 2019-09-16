@@ -1,0 +1,40 @@
+<!--pages/index.wxml-->
+<!-- <text>pages/index.wxml</text> -->
+<!--  -->
+<view class="page" style="background: #82AFD8 url('{{imgCDN}}{{images}}') no-repeat left top;background-size: 100% 100%;">
+
+<!-- 滚动 -->
+
+  <view class="tui-rolling-news">
+  <image class="img" src="/img/lb.png"></image>
+    <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="tui-swiper">
+      <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="tui-swiper-item">
+        <view class="tui-news-item" bindtap='detail'>{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+
+  <view class="button_container">
+    <navigator class="button" url="map/details">
+      <text>{{shortName}}简介</text>
+    </navigator>
+    <navigator class="button" url="map/index">
+      <text>逛逛{{shortName}}</text>
+    </navigator>
+  </view>
+  <view class="copyright">
+    <!-- <navigator url="web-views/web-views?url"> -->
+
+    <text>©官网数据</text>
+
+    <!-- <navigator url="web-views/web-views?url={{mapCopyright.url}}"> -->
+    <navigator>
+      <text>{{mapCopyright?"数据版权："+mapCopyright.name:""}}</text>
+    </navigator>
+  </view>
+</view>
+
+<!-- 需要使用 button 来授权登录 -->
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
